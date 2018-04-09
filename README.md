@@ -7,7 +7,8 @@ Jollyday
 Install maven 
 
 run 
-```sh mvn package 
+```sh
+mvn package 
 ```
 
 
