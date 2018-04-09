@@ -4,7 +4,8 @@ Jollyday
 
 ## Instructions
 ```sh
-mvn package ```
+mvn package 
+```
 
 
 [![Build Status](https://travis-ci.org/svendiedrichsen/jollyday.svg)](https://travis-ci.org/svendiedrichsen/jollyday)
