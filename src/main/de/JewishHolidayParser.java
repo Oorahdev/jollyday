@@ -1,4 +1,4 @@
-package de.jollyday;
+package de;
 
 import de.jollyday.Holiday;
 import de.jollyday.HolidayType;
@@ -14,13 +14,11 @@ import java.util.Set;
 
 public class JewishHolidayParser extends AbstractHolidayParser {
 
-    private static final String PREFIX_PROPERTY_JEWISH = "jewish.";
+    private static final String PREFIX_PROPERTY_JEWISH = "jewish";
 
     @Override
     public void parse(int year, Set<Holiday> holidays, Holidays config) {
         for (JewishHoliday f : config.getJewishHoliday()) {
-            System.out.println(f.getType());
-            System.out.println(f.getDay());
             if (!isValid(f, year)) {
                 continue;
             }
@@ -35,8 +33,6 @@ public class JewishHolidayParser extends AbstractHolidayParser {
                 LocalDate date = gc.getTime().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
                 HolidayType type = xmlUtil.getType(f.getLocalizedType());
                 Holiday h = new Holiday(date, f.getDescriptionPropertiesKey(), type);
-                System.out.println(f.getDescriptionPropertiesKey());
-                System.out.println(h.getDate());
                 holidays.add(h);
             }
 

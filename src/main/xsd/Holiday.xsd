@@ -247,7 +247,6 @@
 
                 <attribute name="type" type="tns:JewishHolidayType">
                 </attribute>
-                <attribute name="melacha" type="tns:HolidayType" ></attribute>
                 <attribute name="month" type="tns:JewishMonth"></attribute>
 
                 <attribute name="day">
@@ -268,7 +267,7 @@
 			<enumeration value="OFFICIAL_HOLIDAY" />
 			<enumeration value="UNOFFICIAL_HOLIDAY" />
             <enumeration value="BANK_HOLIDAY" />
-            <enumeration value="ASSUR" />
+            <enumeration value="ASSUR_BEMELACHA"/>
 		</restriction>
 	</simpleType>
     <simpleType name="JewishHolidayType">

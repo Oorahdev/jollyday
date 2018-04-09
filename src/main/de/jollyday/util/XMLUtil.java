@@ -111,6 +111,10 @@ public class XMLUtil {
 			return HolidayType.OFFICIAL_HOLIDAY;
 		case UNOFFICIAL_HOLIDAY:
 			return HolidayType.UNOFFICIAL_HOLIDAY;
+            case ASSUR_BEMELACHA:
+                return HolidayType.ASSUR_BEMELACHA;
+            case BANK_HOLIDAY:
+                return HolidayType.OFFICIAL_HOLIDAY;
 		default:
 			throw new IllegalArgumentException("Unknown type " + type);
 		}

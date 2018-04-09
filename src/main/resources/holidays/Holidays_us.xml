@@ -18,7 +18,8 @@
                            descriptionPropertiesKey="PESACH_EREV">
 
         </tns:JewishHoliday>
-        <tns:JewishHoliday type="PESACH_FIRST" month="NISSAN" day="15" length="2" melacha="ASSUR" descriptionPropertiesKey="PESACH_FIRST">
+        <tns:JewishHoliday type="PESACH_FIRST" month="NISSAN" day="15" length="2" localizedType="ASSUR_BEMELACHA"
+                           descriptionPropertiesKey="PESACH_FIRST">
 
         </tns:JewishHoliday>
         <tns:JewishHoliday type="PESACH_CHOL_HAMOED" month="NISSAN" length="4" day="17"
@@ -27,7 +28,7 @@
         </tns:JewishHoliday>
 
 
-        <tns:JewishHoliday type="PESACH_LAST" month="NISSAN" length="2" day="22"
+        <tns:JewishHoliday localizedType="ASSUR_BEMELACHA" type="PESACH_LAST" month="NISSAN" length="2" day="22"
                            descriptionPropertiesKey="PESACH_LAST">
         </tns:JewishHoliday>
 
@@ -36,7 +37,8 @@
                            descriptionPropertiesKey="SUKKOS_EREV">
 
         </tns:JewishHoliday>
-        <tns:JewishHoliday type="SUKKOS_FIRST" month="TISHREI" day="15" length="2" melacha="ASSUR" descriptionPropertiesKey="SUKKOS_FIRST">
+        <tns:JewishHoliday type="SUKKOS_FIRST" month="TISHREI" day="15" length="2" localizedType="ASSUR_BEMELACHA"
+                           descriptionPropertiesKey="SUKKOS_FIRST">
 
         </tns:JewishHoliday>
         <tns:JewishHoliday type="SUKKOS_CHOL_HAMOED" month="TISHREI" length="4" day="17"
@@ -49,7 +51,7 @@
 
         </tns:JewishHoliday>
 
-        <tns:JewishHoliday type="SHEMINI_ATZERES" month="TISHREI" length="2" day="23"
+        <tns:JewishHoliday localizedType="ASSUR_BEMELACHA" type="SHEMINI_ATZERES" month="TISHREI" length="2" day="23"
                            descriptionPropertiesKey="SHEMINI_ATZERET">
         </tns:JewishHoliday>
 

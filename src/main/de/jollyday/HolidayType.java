@@ -30,15 +30,37 @@ public enum HolidayType  {
 		public boolean isOfficialHoliday() {
 			return true;
 		}
-	},
+
+        @Override
+        public boolean isOfficeOpen() {
+            return true;
+        }
+    },
 
 	UNOFFICIAL_HOLIDAY {
 		@Override
 		public boolean isOfficialHoliday() {
 			return false;
 		}
-	};
 
+        @Override
+        public boolean isOfficeOpen() {
+            return true;
+        }
+    },
+
+    ASSUR_BEMELACHA {
+        @Override
+        public boolean isOfficialHoliday() {
+            return true;
+        }
+
+        @Override
+        public boolean isOfficeOpen() {
+            return false;
+        }
+    };
 	public abstract boolean isOfficialHoliday();
+    public abstract boolean isOfficeOpen();
 
 }
