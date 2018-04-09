@@ -24,7 +24,9 @@ public class JewishHolidayParser extends AbstractHolidayParser {
             if (!isValid(f, year)) {
                 continue;
             }
-            JewishCalendar calendar = new JewishCalendar(Calendar.getInstance());
+            Calendar c = Calendar.getInstance();
+            c.set(Calendar.YEAR,year);
+            JewishCalendar calendar = new JewishCalendar(c);
 
             for (int day = 0; day < f.getLength(); day++) {
                 calendar.setJewishMonth(f.getMonth().ordinal() + 1);
