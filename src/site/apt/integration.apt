@@ -52,7 +52,7 @@ public class JollydayCalendar extends HolidayCalendar {
 	did spot another open source project for this but their licence forbids most financial institution 
 	from using it.>
 	
-	This example is taken from the frameworks main page and modified to use Jollyday. Here you can see
+	This example is taken from the frameworks de.main page and modified to use Jollyday. Here you can see
 	how seamlessly it can be integrated with Jollyday:
 	
 --------------------------------------

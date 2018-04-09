@@ -24,14 +24,14 @@ API properties
   used for the specific country the Manager is created for.
   
 --------
-manager.impl=de.jollyday.impl.DefaultHolidayManager
+manager.impl=DefaultHolidayManager
 --------
 
   This configuration defines an Manager implementation class used as a default for
   every country. You can define a Manager implementation on a per country base.
 	
 --------
-manager.impl=de.jollyday.impl.DefaultHolidayManager
+manager.impl=DefaultHolidayManager
 manager.impl.us=de.jollyday.impl.MyXMLManager
 --------
 	
@@ -44,13 +44,13 @@ manager.impl.us=de.jollyday.impl.MyXMLManager
   configured depending on the class to parse the info from.
   
 --------
-parser.impl.de.jollyday.config.Fixed=de.jollyday.parser.impl.FixedParser
-parser.impl.de.jollyday.config.FixedWeekdayInMonth=de.jollyday.parser.impl.FixedWeekdayInMonthParser
-parser.impl.de.jollyday.config.IslamicHoliday=de.jollyday.parser.impl.IslamicHolidayParser
-parser.impl.de.jollyday.config.ChristianHoliday=de.jollyday.parser.impl.ChristianHolidayParser
-parser.impl.de.jollyday.config.RelativeToFixed=de.jollyday.parser.impl.RelativeToFixedParser
-parser.impl.de.jollyday.config.RelativeToWeekdayInMonth=de.jollyday.parser.impl.RelativeToWeekdayInMonthParser
-parser.impl.de.jollyday.config.FixedWeekdayBetweenFixed=de.jollyday.parser.impl.FixedWeekdayBetweenFixedParser
+parser.impl.de.jollyday.config.Fixed=FixedParser
+parser.impl.de.jollyday.config.FixedWeekdayInMonth=FixedWeekdayInMonthParser
+parser.impl.de.jollyday.config.IslamicHoliday=IslamicHolidayParser
+parser.impl.de.jollyday.config.ChristianHoliday=ChristianHolidayParser
+parser.impl.de.jollyday.config.RelativeToFixed=RelativeToFixedParser
+parser.impl.de.jollyday.config.RelativeToWeekdayInMonth=RelativeToWeekdayInMonthParser
+parser.impl.de.jollyday.config.FixedWeekdayBetweenFixed=FixedWeekdayBetweenFixedParser
 --------
 	
   The configuration property name starts with <<<parser.impl>>> and finishes with the XML class

@@ -3,4 +3,4 @@ French country names
   This is the french list of country names. Please contact me if there are any
   misspelled names. 
 
-%{snippet|url=file:src/main/resources/descriptions/country_descriptions_fr.properties}
+%{snippet|url=file:src/de.main/resources/descriptions/country_descriptions_fr.properties}

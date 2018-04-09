@@ -13,8 +13,25 @@
 			<enumeration value="SUNDAY"></enumeration>
 		</restriction>
 	</simpleType>
+    <simpleType name="JewishMonth">
+        <restriction base="string">
+            <enumeration value="NISSAN"></enumeration>
+            <enumeration value="IYAR"></enumeration>
+            <enumeration value="SIVAN"></enumeration>
+            <enumeration value="TAMUZ"></enumeration>
+            <enumeration value="AV"></enumeration>
+            <enumeration value="ELLUL"></enumeration>
+            <enumeration value="TISHREI"></enumeration>
+            <enumeration value="CHESHVAN"></enumeration>
+            <enumeration value="KISLEIV"></enumeration>
+            <enumeration value="TEVEIS"></enumeration>
+            <enumeration value="SHVAT"></enumeration>
+            <enumeration value="ADAR"></enumeration>
+        </restriction>
+    </simpleType>
 
-	<simpleType name="Month">
+
+    <simpleType name="Month">
 		<restriction base="string">
 			<enumeration value="JANUARY"></enumeration>
 			<enumeration value="FEBRUARY"></enumeration>
@@ -72,6 +89,9 @@
 			<element name="ChristianHoliday" type="tns:ChristianHoliday"
 				maxOccurs="unbounded" minOccurs="0">
 			</element>
+            <element name="JewishHoliday" type="tns:JewishHoliday"
+                     maxOccurs="unbounded" minOccurs="0">
+            </element>
 			<element name="IslamicHoliday" type="tns:IslamicHoliday"
 				maxOccurs="unbounded" minOccurs="0">
 			</element>
@@ -221,14 +241,70 @@
 			</extension>
 		</complexContent>
 	</complexType>
+    <complexType name="JewishHoliday">
+        <complexContent>
+            <extension base="tns:MoveableHoliday">
+
+                <attribute name="type" type="tns:JewishHolidayType">
+                </attribute>
+                <attribute name="melacha" type="tns:HolidayType" ></attribute>
+                <attribute name="month" type="tns:JewishMonth"></attribute>
+
+                <attribute name="day">
+                    <simpleType>
+                        <restriction base="int">
+                            <minInclusive value="1"></minInclusive>
+                            <maxInclusive value="31"></maxInclusive>
+                        </restriction>
+                    </simpleType>
+
+                </attribute>
+            </extension>
+        </complexContent>
+    </complexType>
 
 	<simpleType name="HolidayType">
 		<restriction base="string">
 			<enumeration value="OFFICIAL_HOLIDAY" />
 			<enumeration value="UNOFFICIAL_HOLIDAY" />
+            <enumeration value="BANK_HOLIDAY" />
+            <enumeration value="ASSUR" />
 		</restriction>
 	</simpleType>
+    <simpleType name="JewishHolidayType">
+    <restriction base="string">
 
+        <enumeration value="PESACH_EREV"></enumeration>
+        <enumeration value="PESACH_FIRST"></enumeration>
+        <enumeration value="PESACH_CHOL_HAMOED"></enumeration>
+        <enumeration value="PESACH_LAST"></enumeration>
+        <enumeration value="ROSH_HASHANAH"></enumeration>
+        <enumeration value="ASERET_YEMEI_TESHUVA"></enumeration>
+        <enumeration value="YOM_KIPPUR"></enumeration>
+        <enumeration value="SUKKOS_EREV"></enumeration>
+        <enumeration value="SUKKOS_FIRST"></enumeration>
+        <enumeration value="SUKKOS_CHOL_HAMOED"></enumeration>
+        <enumeration value="SUKKOS_HOSHANA_RABAH"></enumeration>
+        <enumeration value="SHEMINI_ATZERES"></enumeration>
+        <enumeration value="HANUKKAH"></enumeration>
+        <enumeration value="ASARAH_BETEVET"></enumeration>
+        <enumeration value="TU_BISHVAT"></enumeration>
+        <enumeration value="PURIM"></enumeration>
+        <enumeration value="1_NISAN"></enumeration>
+        <enumeration value="SEFIRAH"></enumeration>
+        <enumeration value="LAG_BAOMER"></enumeration>
+        <enumeration value="SHAVOUT"></enumeration>
+        <enumeration value="17_TAMMUZ"></enumeration>
+        <enumeration value="TISHA_BAV"></enumeration>
+        <enumeration value="1_ELUL"></enumeration>
+        <enumeration value="ROSH_CODESH"></enumeration>
+        <enumeration value="SHABBAT"></enumeration>
+        <enumeration value="YOM_HASHOAH"></enumeration>
+        <enumeration value="YOM_HAZIKARON"></enumeration>
+        <enumeration value="YOM_HAATZAMAUT"></enumeration>
+        <enumeration value="YOM_YERUSHALAIM"></enumeration>
+    </restriction>
+    </simpleType>
 	<simpleType name="ChristianHolidayType">
 		<restriction base="string">
 			<enumeration value="GOOD_FRIDAY"></enumeration>
@@ -266,6 +342,7 @@
 	</complexType>
 
 	<complexType name="Holiday" abstract="true">
+        <attribute name="length" type="int" default="1"/>
 		<attribute name="validFrom" type="int" use="optional" />
 		<attribute name="validTo" type="int" />
 		<attribute name="every" type="tns:HolidayCycleType" default="EVERY_YEAR" />
