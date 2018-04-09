@@ -3,10 +3,11 @@ Jollyday
 
 
 ## Instructions
-```sh
+
 Install maven 
 
-run mvn package 
+run 
+```sh mvn package 
 ```
 
 
