@@ -4,7 +4,9 @@ Jollyday
 
 ## Instructions
 ```sh
-mvn package 
+Install maven 
+
+run mvn package 
 ```
 
 
